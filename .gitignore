@@ -10,3 +10,4 @@ my_dataset.pkl
 my_feature_list.pkl
 ENV/
 enron_mail_20150507.tar.gz
+.idea/
