@@ -16,7 +16,6 @@ def parseOutText(f):
         
         """
 
-
     f.seek(0)  ### go back to beginning of file (annoying)
     all_text = f.read()
 
@@ -39,16 +38,13 @@ def parseOutText(f):
         text = [stemmer.stem(word) for word in split]
         words = ' '.join(text)
 
-
     return words
 
-    
 
 def main():
     ff = open("../text_learning/test_email.txt", "r")
     text = parseOutText(ff)
     print(text)
-
 
 
 if __name__ == '__main__':
