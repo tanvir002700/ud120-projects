@@ -40,5 +40,10 @@ labels_train   = labels_train[:150]
 ### your code goes here
 
 
+from sklearn.linear_model import Lasso
+from sklearn.metrics import accuracy_score
 
+clf = Lasso()
+clf.fit(features_train, labels_train)
 
+pred = clf.predict(features_test)
