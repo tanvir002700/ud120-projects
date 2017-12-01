@@ -50,3 +50,11 @@ pred = clf.predict(features_test)
 accuracy = accuracy_score(pred, labels_test)
 
 print(accuracy)
+
+importances = clf.feature_importances_
+for index, item in enumerate(importances):
+    if item > 0.2:
+        print(index, item)
+
+
+print(vectorizer.get_feature_names()[33614])
