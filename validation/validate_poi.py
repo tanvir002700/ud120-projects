@@ -22,11 +22,11 @@ data_dict = pickle.load(open("../final_project/final_project_dataset.pkl", "rb")
 ### have a different feature list when you do the final project.
 features_list = ["poi", "salary"]
 
-data = featureFormat(data_dict, features_list)
+data = featureFormat(data_dict, features_list, sort_keys='../tools/python2_lesson13_keys.pkl')
 labels, features = targetFeatureSplit(data)
 
 
 
-### it's all yours from here forward!  
+### it's all yours from here forward!
 
 
