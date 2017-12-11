@@ -17,6 +17,7 @@ sys.path.append("../tools/")
 from feature_format import featureFormat, targetFeatureSplit
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import precision_score, recall_score, accuracy_score, confusion_matrix
 
 data_dict = pickle.load(open("../final_project/final_project_dataset.pkl", "rb") )
 
@@ -37,6 +38,17 @@ print(clf.score(features_test, labels_test))
 pred = clf.predict(features_test)
 print(sum(pred))
 print(len(pred))
+print(len(pred) - sum(pred))
 
+print(accuracy_score(pred, labels_test))
 
+print(precision_score(labels_test, pred))
+print(recall_score(labels_test, pred))
+
+predictions = [0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1]
+true_labels = [0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0]
+
+print(precision_score(true_labels, predictions))
+print(recall_score(true_labels, predictions))
+print(confusion_matrix(true_labels, predictions))
 
