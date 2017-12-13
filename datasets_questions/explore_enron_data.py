@@ -20,3 +20,9 @@ import pickle
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "rb"))
 
 
+print(len(enron_data))
+print(len(enron_data.keys()))
+
+print(sum([value['poi'] for key, value in enron_data.items()]))
+
+print(enron_data['SKILLING JEFFREY K'])
